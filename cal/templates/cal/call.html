@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calulator</title>
+</head>
+<body>
+    <form method="POST">
+        {% csrf_token %}
+    {{a}}, {{b}}, {{res}}    
+    <h1> This is my calculator</h1>
+    <table border="3", bgcolor="pink">
+        <tr>
+            <th>enter first number</th>
+            <th><input type="text" name="t1" value="{{a}}"/></th>
+        </tr>
+        <tr>
+            <th>enter second number</th>
+            <th><input type="text" name="t2" value="{{b}}"/></th>
+        </tr>
+        <tr>
+            <th>result</th>
+            <th><input type="text" name="result" value="{{res}}"/></th>
+        </tr>
+        <tr>
+            <th><button type="submit" name="btnsum">SUM</button> </th>
+            <th><button type="submit" name="btnsub">SUB</button> </th>
+            <th><button type="submit" name="btnmul">MUL</button> </th>
+            <th><button type="submit" name="btndiv">DIV</button> </th>
+        </tr>
+    </table>
+</form>
+    
+</body>
+</html>
